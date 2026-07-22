@@ -106,5 +106,6 @@ Helpful learning resources:
 
 - https://www.youtube.com/@tessl-ai
 - https://www.youtube.com/@nateherk
+- sign up for the anthorpic webinars
 
-_Gifted by Gerald Wheaton · FM360 Consulting._
+\_Gifted by Gerald Wheaton

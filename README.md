@@ -8,10 +8,10 @@ shows you how).
 ## What's a skill? What's a command?
 
 - A **skill** is a Markdown file (`SKILL.md`) with a `name` and `description`.
-  Claude reads the description and *decides on its own* when to use it. Skills are
+  Claude reads the description and _decides on its own_ when to use it. Skills are
   how you teach Claude a repeatable procedure.
 - A **command** is a Markdown file you trigger explicitly by typing `/name`. Same
-  idea, but *you* pull the trigger instead of Claude.
+  idea, but _you_ pull the trigger instead of Claude.
 
 Both are just plain instructions. No code, no build step. If you can write a good
 runbook, you can write a skill.
@@ -51,24 +51,24 @@ Start a new Claude Code session after copying. Confirm it took:
 
 ### Skills
 
-| Skill | What it does | Try it by saying |
-| --- | --- | --- |
-| **collaborate** | Interviews you *before* building — surfaces unknowns, asks real multiple-choice questions instead of assuming. | "does this make sense?" / `/collaborate` |
-| **gist** | Fast orientation on a repo: 1–3 sentence summary + up to 5 sharp bullets. | "give me the gist" / `/gist` |
-| **open-questions** | Tracks blockers, decisions, and unknowns in an `open-questions.md` file. Powers the `/oq-*` commands. | "track an open question" |
-| **handoff** | Compacts the current session into a handoff doc so a fresh session (or teammate) can pick up. | "write a handoff" |
-| **hand-in** | The other half of handoff — lists saved handoff docs and loads the one you pick back into context. | "resume from a handoff" |
-| **fetch-ticket** | **Teaching skeleton.** Pulls a ticket from your ticketing system via its MCP/plugin. Ships with `TODO(you)` blanks to fill in — read it to learn how skills are built. | "pull ticket ABC-123" |
+| Skill              | What it does                                                                                                                                                           | Try it by saying                         |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| **collaborate**    | Interviews you _before_ building — surfaces unknowns, asks real multiple-choice questions instead of assuming.                                                         | "does this make sense?" / `/collaborate` |
+| **gist**           | Fast orientation on a repo: 1–3 sentence summary + up to 5 sharp bullets.                                                                                              | "give me the gist" / `/gist`             |
+| **open-questions** | Tracks blockers, decisions, and unknowns in an `open-questions.md` file. Powers the `/oq-*` commands.                                                                  | "track an open question"                 |
+| **handoff**        | Compacts the current session into a handoff doc so a fresh session (or teammate) can pick up.                                                                          | "write a handoff"                        |
+| **hand-in**        | The other half of handoff — lists saved handoff docs and loads the one you pick back into context.                                                                     | "resume from a handoff"                  |
+| **fetch-ticket**   | **Teaching skeleton.** Pulls a ticket from your ticketing system via its MCP/plugin. Ships with `TODO(you)` blanks to fill in — read it to learn how skills are built. | "pull ticket ABC-123"                    |
 
 ### Commands (`open-questions` workflow)
 
-| Command | What it does |
-| --- | --- |
-| `/oq-init` | Create the `open-questions.md` file and register it in `CLAUDE.md`. |
-| `/oq-scan` | Scan the repo for TODO/FIXME/BLOCKED/etc. and add net-new items. |
-| `/oq-add` | Add a question by hand, interactively. |
-| `/oq-list` | Print a tight numbered list of everything still open. |
-| `/oq-resolve` | Walk unresolved items and mark them resolved, one at a time. |
+| Command       | What it does                                                        |
+| ------------- | ------------------------------------------------------------------- |
+| `/oq-init`    | Create the `open-questions.md` file and register it in `CLAUDE.md`. |
+| `/oq-scan`    | Scan the repo for TODO/FIXME/BLOCKED/etc. and add net-new items.    |
+| `/oq-add`     | Add a question by hand, interactively.                              |
+| `/oq-list`    | Print a tight numbered list of everything still open.               |
+| `/oq-resolve` | Walk unresolved items and mark them resolved, one at a time.        |
 
 ---
 
@@ -93,7 +93,7 @@ through the anatomy every skill shares:
 1. **Frontmatter** (`name` + a trigger-rich `description`) — how Claude finds it.
 2. **A body of plain instructions** — a numbered runbook with decision points.
 3. **Delegation** — hard work (API calls, auth) lives in an MCP or CLI tool; the
-   skill decides *when* and *with what*, not *how*.
+   skill decides _when_ and _with what_, not _how_.
 4. **Guardrails** — "ask, don't guess", "confirm before writes", "stop on
    ambiguity". This is what makes a skill safe to reuse.
 
@@ -101,5 +101,10 @@ To make a new one: copy any skill's folder, rename it, rewrite the frontmatter a
 body. That's the whole loop.
 
 ---
+
+Helpful learning resources:
+
+- https://www.youtube.com/@tessl-ai
+- https://www.youtube.com/@nateherk
 
 _Gifted by Gerald Wheaton · FM360 Consulting._

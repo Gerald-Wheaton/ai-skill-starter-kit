@@ -15,8 +15,8 @@ Produce a tight orientation summary of the current working repository. Nothing e
 
 ## How to gather facts
 
-Do NOT explore inline — file dumps burn main-thread context. Spawn ONE subagent
-(`cavecrew-investigator` if available, else `Explore`) with a prompt like:
+Do NOT explore inline — file dumps burn main-thread context. Spawn ONE `Explore`
+subagent with a prompt like:
 
 > Orient me in this repo. Return compressed findings only: (1) what this project IS and
 > its purpose, (2) external systems/integrations it touches, (3) current status, open
